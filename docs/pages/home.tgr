@@ -1,0 +1,8 @@
+form : class[panel] id[credentials] type[login]
+      lnb : class[title] : Checking Account...
+      lnb : class[caption] : Are you logged in?
+      lnb : class[caption] : Do you have updated credentials?
+      lnb : class[caption] : Was the password for the account changed?
+      lnb : class[caption] : Should you be logged in?
+      lnb : class[caption] : Checking everything right now...
+/form

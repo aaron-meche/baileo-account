@@ -1,0 +1,127 @@
+:root{
+    --seafoam: #80DCB7;
+    --aqua: #13335c;
+    --darkAqua: rgb(18, 18, 47);
+    --silverAqua: rgb(40, 55, 93);
+    --princeton: #FF8F00;
+    --honey: #F6AE2D;
+    --violetBlue: rgb(54, 54, 105);
+    --lightPistachio: #9AB9AC;
+    --vanillaCream: #E5D9BE;
+    --softLightBlue: #91A7CF;
+    --burntOrange: #BC6039;
+    --silkyPurple: #7B6380;
+    --darkPlum: #24105C;
+    --royalPurple: #51284a;
+    --spruceLeaves: #2C494B;
+    --toyPurple: rgb(178, 129, 246);
+    --lilyBlue: rgb(197, 171, 254);
+    --blueRaspberry: #20427A;
+    --grapeTaffy: #5E468B;
+    --spacePurple: rgb(38, 25, 56);
+    --plutoBlue: rgb(33, 35, 52);
+    --charcoal: rgb(21,21,23);
+    --lavendarBlush: #EEE5E9;
+    --grannySmithApple: #9CD08F;
+    --asparagus: #87A461;
+    --raisinBlack: #443a51;
+    --tumbleweed: #F4B393;
+    --lightSalmon: #FDA579;
+    --teaGreen: #C5DBBC;
+    --olivine: #92BA78;
+    --boldOlivine: #71905c;
+    --darkOlivine: #4f5f44;
+    --onyx: rgb(32,32,33);
+    --darkgray: rgb(51, 51, 51);
+
+    --accentColor: var(--lightPistachio);
+    --popBorder: var(--seafoam);
+
+    --mainFont: BaileyScript;
+}
+
+@font-face {
+    font-family: 'BaileyScript';
+    src: url('BaileyScript/BaileyScript.ttf');
+}
+
+body{
+    margin: 0;
+    background-color: whitesmoke;
+    font-weight: 500;
+    font-family: var(--mainFont);
+}
+
+.panel{
+    width: 400px;
+    max-width: 90vw;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 0 1.5px 0 gray;
+    margin: auto;
+    margin-top: 30pt;
+    border-radius: 10px;
+}
+
+.panel{
+    color: rgb(31, 11, 43);
+}
+
+.panel .title{
+    font-size: 20pt;
+    text-align: center;
+}
+
+.panel .caption{
+    font-size: 10pt;
+    text-align: center;
+    margin-top: 5pt;
+}
+
+.panel input{
+    height: 25pt;
+    width: 100%;
+    padding-left: 10pt;
+    margin-top: 15pt;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: solid 1pt gray;
+    border-radius: 0;
+    transition: border-bottom 200ms;
+    font-size: 10pt;
+    font-family: var(--mainFont);
+}
+
+.panel input::placeholder{
+    color: rgb(189, 189, 189);
+}
+
+.panel input:focus{
+    border-bottom: solid 2pt rgb(187, 78, 255);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.panel .submit{
+    background-color: rgb(235, 210, 243) !important;
+}
+
+.panel .submit:hover{
+    background-color: rgb(190, 155, 206) !important;
+}
+
+.button{
+    height: 25pt;
+    width: 100%;
+    margin-top: 10pt;
+    transition: border-bottom 200ms;
+    font-size: 10pt;
+    border: solid 1px purple !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover{
+    background-color: rgb(231, 231, 231);
+}

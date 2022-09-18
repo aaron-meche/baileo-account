@@ -1,0 +1,7 @@
+form : class[panel] id[credentials] type[login]
+      lnb : class[title] : Login to Baileo Account
+      input : type[text] placeholder[Username] id[userCreds]
+      input : type[password] placeholder[Password] id[passCreds]
+      input : type[submit] class[submit button] id[submitCreds] value[Submit] contenteditable[false]
+      lnb : class[button] onclick[open_page('signup')] : Create Account
+/form
