@@ -56,7 +56,7 @@ function openPage(page) {
 
 function spring() {
     if (springPage) {
-        window.open('https://' + springPage + '/login.html?uk=' + localStorage['uk'] + '&ak=' + localStorage['ak'], '_self');
+        window.open('http://' + springPage + '/login.html?uk=' + localStorage['uk'] + '&ak=' + localStorage['ak'], '_self');
     } else {
         alert('Account Verified')
     }
