@@ -55,7 +55,11 @@ function openPage(page) {
 }
 
 function spring() {
-    window.open('https://' + springPage + '.baileo.us', '_self');
+    if (springPage) {
+        window.open('https://' + springPage + '/login.html?uk=' + localStorage['uk'] + '&ak=' + localStorage['ak'], '_self');
+    } else {
+        alert('Account Verified')
+    }
 }
 
 onValue(ref(database), (snapshot) => {
