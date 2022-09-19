@@ -36,6 +36,9 @@ const projectRef = 'services/' + projectTitle + '/';
 var db;
 var pdb;
 
+let urlParams = new URLSearchParams(document.location.search);
+let springPage = urlParams.get('spring');
+
 // ---
 
 function writeData(path, value) {
@@ -51,6 +54,10 @@ function openPage(page) {
     window.location.reload();
 }
 
+function spring() {
+    window.open('https://' + springPage + '.baileo.us', '_self');
+}
+
 onValue(ref(database), (snapshot) => {
     // Baileo Database
     db = snapshot.val();
@@ -61,9 +68,8 @@ onValue(ref(database), (snapshot) => {
     if (sessionStorage['activePage'] == 'home') {
         let userKey = pdb['user-keys'][localStorage['uk']];
         if (userKey) {
-            console.log(pdb['users'][userKey]['keys']['auth-key']);
             if (pdb['users'][userKey]['keys']['auth-key'] == localStorage['ak']) {
-                alert('Yes');
+                spring();
             } else {
                 openPage('login');
             }
@@ -86,7 +92,7 @@ onValue(ref(database), (snapshot) => {
                     if (password == pdb['users'][username]['password']) {
                         localStorage['ak'] = pdb['users'][username]['keys']['auth-key'];
                         localStorage['uk'] = pdb['users'][username]['keys']['user-key'];
-                        alert('Logged In');
+                        spring();
                     } else {
                         alert('Invalid credentials or account does not exits.');
                     }
@@ -119,7 +125,7 @@ onValue(ref(database), (snapshot) => {
                                 localStorage['ak'] = authKey;
                                 localStorage['uk'] = userKey;
                                 writeProjData('user-keys/' + userKey, username);
-                                alert('Account created');
+                                spring();
                             } else {
                                 alert('Username must be at least 6 characters long')
                             }
